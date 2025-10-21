@@ -1,0 +1,26 @@
+body {
+  font-family: "Public Sans", sans-serif;
+}
+.text-preset-1 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 120%;
+  color: #201f24;
+}
+.text-preset-4{
+  color: #696868;
+  font-weight: 400;
+  opacity: 1;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  font-size: 0.875rem;
+  white-space: no-wrap;
+  gap: 0.5rem;
+}
+
+label {
+  color: #696868;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
