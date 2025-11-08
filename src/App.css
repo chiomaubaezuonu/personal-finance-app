@@ -2,7 +2,7 @@ body {
   font-family: "Public Sans", sans-serif;
 }
 .text-preset-1 {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 700;
   line-height: 120%;
   color: #201f24;
@@ -11,7 +11,6 @@ body {
   color: #696868;
   font-weight: 400;
   opacity: 1;
-  display: inline-flex;
   align-items: center;
   text-align: center;
   font-size: 0.875rem;
@@ -21,6 +20,14 @@ body {
 
 label {
   color: #696868;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 0.875rem;
+  margin-bottom: 0.063rem;
+  
+}
+.ant-progress .ant-progress-outer{
+  margin-top: 1rem;
+}
+.ant-progress .ant-progress-bg {
+background-color: #277C78;
 }

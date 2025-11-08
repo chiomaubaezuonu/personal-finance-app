@@ -1,1 +1,10 @@
 @import "tailwindcss";
+@theme {
+  --color-beige-50: #fefdf9;
+  --color-beige-100: #fefcf3;
+  --color-beige-200: #fcf7e6;
+  --color-beige-300: #f8f4f0;
+  --color-beige-400: #f0e6d2;
+  --color-beige-500: #e8d5b7;
+  --color-dark: #201f24;
+}

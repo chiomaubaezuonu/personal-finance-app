@@ -1,69 +1,9 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const SignupPage = () => {
+  const [showPassword, setShowPassword] = useState(false);
   return (
-    // <div className="bg-[#f8f4f0]">
-    //   <div className="flex w-full h-[calc(100vh-4.375rem)] items-center justify-center p-4">
-    //     <div className="w-full flex flex-col max-w-[35rem] p-8 gap-8 bg-white rounded-xl">
-    //       <h1 className="text-preset-1 font-bold text-[2rem]">Signup</h1>
-    //       <div className="flex flex-col gap-8 text-center">
-    //         <form action="" className="w-full space-y-8">
-    //           <div className="flex flex-col space-y-2">
-    //             <label htmlFor="" className="text-left">
-    //               Name
-    //             </label>
-    //             <input
-    //               type="text"
-    //               className="border-[0.063rem] rounded-lg border-[#98908b] py-1.5 px-5"
-    //               placeholder="Name"
-    //             />
-    //           </div>
-    //           <div className="flex flex-col space-y-2">
-    //             <label htmlFor="" className="text-left">
-    //               Email
-    //             </label>
-    //             <input
-    //               type="text"
-    //               className="border-[0.063rem] rounded-lg border-[#98908b] py-1.5 px-5"
-    //               placeholder="Email"
-    //             />
-    //           </div>
-    //           <div className="space-y-2 flex flex-col items-start">
-    //             <label htmlFor="" className="labeled">
-    //               Password
-    //             </label>
-    //             <div className="relative rounded-lg flex w-full gap-4 items-center border-[0.063rem] border-[#98908b]">
-    //               <input
-    //                 className=" rounded-lg outline-none py-1.5 px-5"
-    //                 type="text"
-    //                 placeholder="Password"
-    //               />
-
-    //               <img
-    //                 src="/images/show-pswd.svg"
-    //                 className="cursor-pointer"
-    //                 alt="show-password"
-    //               />
-    //             </div>
-    //             <p className="text-sm text-gray-500 text-right">
-    //               Passwords must be at least 8 characters
-    //             </p>
-    //           </div>
-
-    //           <button className="rounded-lg p-4 bg-gray-900 w-full font-bold text-sm text-white">
-    //             Create Account
-    //           </button>
-    //           <span className="text-preset-4">
-    //             Already have an account ?{" "}
-    //             <Link to="/" className="underline cursor-pointer font-bold text-gray-900">
-    //               Login{" "}
-    //             </Link>
-    //           </span>
-    //         </form>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
     <div className="bg-[#f8f4f0]">
       <div className="flex w-full h-[calc(100vh-4.375rem)] lg:h-screen items-center justify-between p-4">
         <div className="hidden relative max-w-[560px] lg:h-full lg:flex rounded-lg lg:flex-col flex-1 overflow-hidden p-10 lg:p-0">
@@ -89,19 +29,29 @@ const SignupPage = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-1 items-center justify-center w-full h-full lg:p-4">
+        <div className="flex flex-1 items-center justify-center w-full h-full overflow-y-auto py-6 lg:p-4">
           {" "}
-          <div className="w-full flex flex-col max-w-[35rem] p-8 gap-8 bg-white rounded-xl">
-            <h1 className="text-preset-1 font-bold text-[2rem]">Login</h1>
+          <div className="w-full flex flex-col max-w-[35rem] mx-4 mt-36 px-5 py-6 gap-8 bg-white rounded-md">
+            <h1 className="text-preset-1 font-bold text-[2rem]">Sign Up</h1>
             <div className="flex flex-col gap-8 text-center">
-              <form action="" className="w-full space-y-8">
+              <form action="" className="w-full flex flex-col  gap-4">
+                <div className="flex flex-col space-y-2">
+                  <label htmlFor="" className="text-left">
+                    Avatar
+                  </label>
+                  <input
+                    type="text"
+                    className="border-[0.063rem] rounded-lg border-[#98908b] py-1.5 px-5"
+                    placeholder="No file selected"
+                  />
+                </div>
                 <div className="flex flex-col space-y-2">
                   <label htmlFor="" className="text-left">
                     Name
                   </label>
                   <input
                     type="text"
-                    className="border-[0.063rem] rounded-lg border-[#98908b] py-1.5 px-5"
+                    className="text-sm w-full h-12 rounded-md border border-[#98908b] px-3 pr-10"
                     placeholder="Name"
                   />
                 </div>
@@ -111,8 +61,18 @@ const SignupPage = () => {
                   </label>
                   <input
                     type="text"
-                    className="border-[0.063rem] rounded-lg border-[#98908b] py-1.5 px-5"
+                    className="text-sm w-full h-12 rounded-md border border-[#98908b] px-3 pr-10"
                     placeholder="Email"
+                  />
+                </div>
+                <div className="flex flex-col space-y-2">
+                  <label htmlFor="" className="text-left">
+                    Initial Balance
+                  </label>
+                  <input
+                    type="text"
+                    className="text-sm w-full h-12 rounded-md border border-[#98908b] px-3 pr-10"
+                    placeholder="$ Initial Balance"
                   />
                 </div>
                 <div className="space-y-2 flex flex-col items-start">
@@ -121,19 +81,39 @@ const SignupPage = () => {
                   </label>
                   <div className="relative rounded-lg flex w-full items-center border-[0.063rem] border-[#98908b]">
                     <input
-                      className="rounded-lg outline-none py-1.5 px-5 flex-1 pr-12"
+                      className="text-sm w-full h-12 rounded-md border border-[#98908b] px-3 pr-10"
                       type="text"
                       placeholder="Password"
                     />
                     <img
-                      src="/images/show-pswd.svg"
-                      className="cursor-pointer absolute right-3"
+                      src="/images/show-pswd2.svg"
+                      className="cursor-pointer mr-4"
                       alt="show-password"
+                      onClick={() => setShowPassword(!showPassword)}
                     />
+                    {!showPassword && (
+                      <span className="bg-[#696868]  absolute right-3.5 w-5 h-[0.077rem] rotate-[235deg]"></span>
+                    )}
                   </div>
-                  <p className="text-sm text-gray-500 text-right">
+                  {/* <p className="text-sm text-gray-500 text-right">
                     Passwords must be at least 8 characters
-                  </p>
+                  </p> */}
+                  <div className="flex items-start justify-start w-full">
+                    <input
+                      id="default-checkbox"
+                      type="checkbox"
+                      className="w-8 h-8 accent-gray-900 text-gray-900 bg-gray-100 border-gray-300 rounded"
+                      value=""
+                    />
+                    <label
+                      htmlFor="default-checkbox"
+                      className="ms-2 text-sm text-gray-500 font-bold mt-[0.3rem]"
+                    >
+                      Create with demo? By selecting this option, your user will
+                      automatically have transaction, budget, and pot data
+                      created.
+                    </label>
+                  </div>
                 </div>
 
                 <button className="rounded-lg p-4 bg-gray-900 w-full font-bold text-sm text-white">
@@ -141,10 +121,7 @@ const SignupPage = () => {
                 </button>
                 <span className="text-preset-4">
                   Already have an account ?{" "}
-                  <Link
-                    to="/signup"
-                    className="underline font-bold text-gray-900"
-                  >
+                  <Link to="/" className="underline font-bold text-gray-900">
                     Login{" "}
                   </Link>
                 </span>

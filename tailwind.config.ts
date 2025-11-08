@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
 
-export default {
+const config: Config = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     screens: {
@@ -12,11 +12,15 @@ export default {
       tablet: "900px",
     },
     extend: {
-     fontFamily: {
-      prata: ["Prata", "serif"],
-      outfit: ["Outfit", "sans-serif"]
-     }
+      colors: {
+        brand: "red",
+      },
+      fontFamily: {
+        prata: ["Prata", "serif"],
+        outfit: ["Outfit", "sans-serif"],
+      },
     },
   },
   plugins: [],
-} 
+};
+export default config;
